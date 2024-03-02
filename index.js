@@ -13,9 +13,7 @@ app.listen(PORT, () => {
 });
 
 app.use(cors())
-app.use(cors({
-  origin: "https://order-management-client.onrender.com"
-}))
+
 app.use((req, res, next) => {
   const allowedOrigin = req.headers.origin || 'http://localhost:5173';
   res.header('Access-Control-Allow-Origin', allowedOrigin);
